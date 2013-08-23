@@ -4,8 +4,9 @@ gem 'rails', '3.2.14'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
+group :development do 
+  gem 'sqlite3'
+end
 gem 'execjs'
 gem 'therubyracer'
 
@@ -41,3 +42,12 @@ gem 'jquery-rails'
 gem 'spree', '2.0.4'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-0-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-0-stable'
+
+group :doc do
+	gem 'sdoc', '0.3.20', require:false
+end
+
+group :production do 
+	gem 'pg', '0.15.1'
+	gem 'rails_12factor', '0.0.2'
+end
